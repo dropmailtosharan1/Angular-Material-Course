@@ -27,9 +27,9 @@ export const routes: Routes = [
                 data: { breadcrumb: 'Data Display' }
             },
             {
-                path: 'kanban',
-                loadComponent: () => import('./kanban-mini/kanban-mini.component').then(c => c.KanbanMiniComponent),
-                data: { breadcrumb: 'Kanban' }
+                path: 'mini-dashboard',
+                loadComponent: () => import('./mini-dashboard/mini-dashboard.component').then(c => c.MiniDashboardComponent),
+                data: { breadcrumb: 'mini-dashboard' }
             },
         ]
     }

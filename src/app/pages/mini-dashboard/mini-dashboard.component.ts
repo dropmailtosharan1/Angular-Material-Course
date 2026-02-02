@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { CdkDropListGroup, CdkDrag, CdkDropList, CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
+
 @Component({
-  selector: 'app-kanban-mini',
-  templateUrl: './kanban-mini.component.html',
-  styleUrl: './kanban-mini.component.scss',
-  imports: [CdkDropListGroup, CdkDrag, CdkDropList]
+  selector: 'app-mini-dashboard',
+  imports: [CdkDropListGroup, CdkDrag, CdkDropList],
+  templateUrl: './mini-dashboard.component.html',
+  styleUrl: './mini-dashboard.component.scss'
 })
-export class KanbanMiniComponent {
-  todo = [
+export class MiniDashboardComponent {
+ todo = [
     'Get to work',
     'Pick up groceries',
     'Go home',
