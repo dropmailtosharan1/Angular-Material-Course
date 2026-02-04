@@ -23,7 +23,6 @@ export class ContactUsFormComponent {
 
   weekendFilter = (d: Date | null): boolean => {
     const day = (d || new Date()).getDay();
-    // Prevent Saturday and Sunday from being selected.
     return day !== 0 && day !== 6;
   };
 
@@ -31,11 +30,11 @@ export class ContactUsFormComponent {
     this.form = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      message: [''],
-      topic: [''],
+      message: ['', Validators.required],
+      topic: ['', Validators.required],
       priority: ['medium'],
-      subscribe: [false],
-      contactDate: [null]
+      subscribe: [false, Validators.requiredTrue],
+      contactDate: [null, Validators.required]
     });
   }
 

@@ -17,7 +17,7 @@ export class UserProfileManagerComponent {
   readonly snackBar = inject(MatSnackBar);
 
   user = {
-    name: 'John Doe',
+    name: 'Chinni Krishna',
     bio: 'Angular developer & UI designer.'
   };
 
@@ -31,7 +31,7 @@ export class UserProfileManagerComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.user = result
-        this.snackBar.open("Profile updated!", "Close", { duration: 3000 })
+        this.snackBar.open("Profile updated!", "Close")
       }
     })
   }
