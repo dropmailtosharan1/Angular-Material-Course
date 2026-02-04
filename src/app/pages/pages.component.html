@@ -9,12 +9,8 @@
 				<a matListItemTitle routerLink="">Dashboard</a>
 			</mat-list-item>
 			<mat-list-item>
-				<mat-icon matListItemIcon>contact_mail</mat-icon>
-				<a matListItemTitle routerLink="/contact">Contact Us</a>
-			</mat-list-item>
-			<mat-list-item>
 				<mat-icon matListItemIcon>person</mat-icon>
-				<a matListItemTitle routerLink="/user">User Profile Manager</a>
+				<a matListItemTitle routerLink="/user">User Profile</a>
 			</mat-list-item>
 			<mat-list-item>
 				<mat-icon matListItemIcon>save</mat-icon>
@@ -22,7 +18,12 @@
 			</mat-list-item>
 			<mat-list-item>
 				<mat-icon matListItemIcon>task</mat-icon>
-				<a matListItemTitle routerLink="/kanban">Kanban Board Mini</a>
+				<a matListItemTitle routerLink="/mini-dashboard">Mini Dashboard</a>
+			</mat-list-item>
+
+			<mat-list-item>
+				<mat-icon matListItemIcon>contact_mail</mat-icon>
+				<a matListItemTitle routerLink="/contact">Contact Us</a>
 			</mat-list-item>
 		</mat-nav-list>
 	</mat-sidenav>
@@ -67,14 +68,13 @@
 		</div>
 		}
 
-		<!-- <mat-progress-spinner mode="determinate" value="50"></mat-progress-spinner> -->
 		<mat-toolbar class="toolbar">
-			<button mat-mini-fab (click)="mainnav.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
+			<button mat-mini-fab (click)="mainnav.toggle()">
 				<mat-icon>menu</mat-icon>
 			</button>
 			<span class="toolbar-title">{{ breadcrumb }}</span>
 			<span class="spacer"></span>
-			<button mat-mini-fab (click)="setting.toggle()"><!--Version 20 : matMiniFab  -- Version 19 : mat-mini-fab-->
+			<button mat-mini-fab (click)="setting.toggle()">
 				<mat-icon>tune</mat-icon>
 			</button>
 		</mat-toolbar>
